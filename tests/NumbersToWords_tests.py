@@ -22,3 +22,7 @@ class NumbersToWordsTest(TestCase):
 	def test_21_prints_Twenty_One(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert_segment(21), "Twenty One")
+
+	def test_55_prints_Fifty_Five(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert_segment(55), "Fifty Five")
