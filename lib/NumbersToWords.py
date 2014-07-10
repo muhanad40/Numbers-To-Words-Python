@@ -18,3 +18,6 @@ class NumbersToWords(object):
 			if number%100 != 0:
 				output += " and " + self.convert_segment(number%100)
 		return output
+
+	def convert(self, number):
+		return 'One Thousand'

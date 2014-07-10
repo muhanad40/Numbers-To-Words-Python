@@ -3,11 +3,11 @@ from lib import NumbersToWords
 
 class NumbersToWordsTest(TestCase):
 
-	def test_1_prints_out_One(self):
+	def test_1_prints_One(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert_segment(1), "One")
 
-	def test_5_prints_out_Five(self):
+	def test_5_prints_Five(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert_segment(5), "Five")
 
@@ -58,3 +58,7 @@ class NumbersToWordsTest(TestCase):
 	def test_999_prints_Nine_Hundred_and_Ninty_Nine(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert_segment(999), "Nine Hundred and Ninty Nine")
+
+	def test_1000_prints_One_Thousand(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1000), "One Thousand")
