@@ -59,9 +59,13 @@ class NumbersToWordsTest(TestCase):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert_segment(999), "Nine Hundred and Ninty Nine")
 
-	def test_1000_prints_One_Thousand(self):
+class NumbersToWordsEdgeCaseTests(TestCase):
+
+	def test_000_prints_nothing(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
-		self.assertEqual(numbers_to_words.convert(1000), "One Thousand")
+		self.assertEqual(numbers_to_words.convert_segment(000), "")
+
+class NumbersToWordsLargeNumberTests(TestCase):
 
 	def test_split_numbers_into_segments_of_3s(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()

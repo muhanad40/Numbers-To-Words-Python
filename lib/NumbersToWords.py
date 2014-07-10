@@ -6,21 +6,25 @@ class NumbersToWords(object):
 
 	def convert_segment(self, number):
 		output = ""
-		if number <= 20:
-			output = self.ONES_TENS[number-1].capitalize()
-		elif number <= 99:
-			output = self.MULTIPLES_OF_TEN[number/10-1].capitalize()
-			if number%10 != 0:
-				output += " " + self.ONES_TENS[number%10-1].capitalize()
-		elif number <= 999:
-			output = self.ONES_TENS[number/100-1].capitalize()
-			output += " " + self.WORDS[0].capitalize()
-			if number%100 != 0:
-				output += " and " + self.convert_segment(number%100)
+		number = int(number)
+		if number <= 0:
+			output = ""
+		else:
+			if number <= 20:
+				output = self.ONES_TENS[number-1].capitalize()
+			elif number <= 99:
+				output = self.MULTIPLES_OF_TEN[number/10-1].capitalize()
+				if number%10 != 0:
+					output += " " + self.ONES_TENS[number%10-1].capitalize()
+			elif number <= 999:
+				output = self.ONES_TENS[number/100-1].capitalize()
+				output += " " + self.WORDS[0].capitalize()
+				if number%100 != 0:
+					output += " and " + self.convert_segment(number%100)
 		return output
 
 	def convert(self, number):
-		return 'One Thousand'
+		pass
 
 	def make_segments(self, number):
 		# reverse the order of numbers
