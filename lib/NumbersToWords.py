@@ -21,3 +21,16 @@ class NumbersToWords(object):
 
 	def convert(self, number):
 		return 'One Thousand'
+
+	def make_segments(self, number):
+		# reverse the order of numbers
+		number = str(number)[::-1]
+		output = []
+		# split numbers into segments of 3s
+		for num in range(0, len(number), 3):
+			output.append(number[num:num+3])
+		# reverse each segment back to normal
+		for i,v in enumerate(output):
+			output[i] = output[i][::-1]
+		# reverse the order of segments
+		return output[::-1]
