@@ -13,3 +13,4 @@ class NumbersToWordsTest(TestCase):
 
 	def test_12_prints_Twelve(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert_segment(12), "Twelve");
