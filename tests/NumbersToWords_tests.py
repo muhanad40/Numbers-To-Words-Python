@@ -34,3 +34,7 @@ class NumbersToWordsTest(TestCase):
 	def test_100_prints_One_Hundred(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert_segment(100), "One Hundred")
+
+	def test_101_prints_One_Hundred_and_One(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert_segment(101), "One Hundred and One")

@@ -15,4 +15,6 @@ class NumbersToWords(object):
 		elif number <= 999:
 			output = self.ONES_TENS[number/100-1].capitalize()
 			output += " " + self.WORDS[number/100-1].capitalize()
+			if number%100 != 0:
+				output += " and " + self.convert_segment(number%100)
 		return output
