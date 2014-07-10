@@ -1,0 +1,2 @@
+class NumbersToWords(object):
+	pass
