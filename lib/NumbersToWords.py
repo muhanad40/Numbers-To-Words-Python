@@ -24,7 +24,14 @@ class NumbersToWords(object):
 		return output
 
 	def convert(self, number):
-		pass
+		segment_output = ""
+		number_segments = self.make_segments(number)
+		number_segments = number_segments[::-1]
+		for i, segment in enumerate(number_segments):
+			if int(segment) > 0:
+				segment_output += self.convert_segment(int(segment))
+				segment_output += " " + self.WORDS[i].capitalize()
+		return segment_output
 
 	def make_segments(self, number):
 		# reverse the order of numbers

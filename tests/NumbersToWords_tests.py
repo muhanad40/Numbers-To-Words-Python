@@ -69,5 +69,9 @@ class NumbersToWordsLargeNumberTests(TestCase):
 
 	def test_split_numbers_into_segments_of_3s(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
-		expected = ["1", "234"]
-		self.assertEqual(numbers_to_words.make_segments(1234), expected)
+		self.assertEqual(numbers_to_words.make_segments(1234), ["1", "234"])
+
+	def test_1000_prints_One_Thousand(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1000), "One Thousand")
+	
