@@ -7,9 +7,9 @@ I wrote this script in JavaScript and Ruby
 
 # Usage
 ```python
-	from NumbersToWords/lib import NumbersToWords
-	numbers_to_words = NumbersToWords()
-	print numbers_to_words.convert(123) #=> "One Hundred and Twenty Three"
+from NumbersToWords/lib import NumbersToWords
+numbers_to_words = NumbersToWords()
+print numbers_to_words.convert(123) #=> "One Hundred and Twenty Three"
 ```
 
 # Demo
