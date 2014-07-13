@@ -1,8 +1,9 @@
 class NumbersToWords(object):
-	def __init__(self):
+	def __init__(self, context=''):
 		self.ONES_TENS = "one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split(" ")
 		self.MULTIPLES_OF_TEN = "ten twenty thirty fourty fifty sixty seventy eighty ninty hundred".split(" ")
 		self.WORDS = "hundred thousand million billion trillion gazillion".split(" ")
+		self.context = context
 
 	def convert_segment(self, number):
 		output = ""
@@ -27,14 +28,13 @@ class NumbersToWords(object):
 		segment_output = []
 		number_segments = self.make_segments(number)
 		number_segments = number_segments[::-1]
- 
 		for i, segment in enumerate(number_segments):
 			if int(segment) > 0:
 				if i != 0:
 					segment_output.append(self.convert_segment(segment) + " " + self.WORDS[i].capitalize())
 				else:
 					segment_output.append(self.convert_segment(segment))
-		return ', '.join(segment_output[::-1])
+		return ', '.join(segment_output[::-1]) + (self.context.capitalize() if self.context else "")
 
 	def make_segments(self, number):
 		# reverse the order of numbers
