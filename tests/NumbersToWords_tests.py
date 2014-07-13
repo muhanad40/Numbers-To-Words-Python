@@ -122,3 +122,7 @@ class NumbersToWordsTest(TestCase):
 
 	def test_1211451199999_prints_One_Trillion_Two_Hundred_and_Eleven_Trillion_Four_Hundred_and_Fifty_One_Million_One_Hundred_and_Ninty_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
 		self.assertEqual(self.numbers_to_words.convert(1211451199999), "One Trillion, Two Hundred and Eleven Billion, Four Hundred and Fifty One Million, One Hundred and Ninty Nine Thousand, Nine Hundred and Ninty Nine")
+
+	def test_rabbits_context_prints_One_Hundred_and_Fifty_One_Rabbits(self):
+		rabbits = NumbersToWords.NumbersToWords("rabbits")
+		self.assertEqual(rabbits.convert(151), "One Hundred and Fifty One Rabbits")
