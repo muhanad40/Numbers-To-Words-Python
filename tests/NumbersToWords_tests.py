@@ -74,4 +74,7 @@ class NumbersToWordsLargeNumberTests(TestCase):
 	def test_1000_prints_One_Thousand(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert(1000), "One Thousand")
-	
+
+	def test_1001_prints_One_Thousand_and_One(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1001), "One Thousand, One")
