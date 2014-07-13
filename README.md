@@ -11,6 +11,7 @@ from lib import NumbersToWords
 numbers_to_words = NumbersToWords.NumbersToWords()
 print numbers_to_words.convert(123) #=> "One Hundred and Twenty Three"
 
+# Output with a context
 rabbits = NumbersToWords.NumbersToWords("rabbits")
 print rabbits.convert(123) #=> "One Hundred and Twenty Three Rabbits"
 
