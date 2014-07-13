@@ -16,14 +16,14 @@
 			<div class="form-group">
 				<label for="input-context">Context (plural):</label>
 				<br/>
-				<input type="text" id="input-context" class="form-control" value="" placeholder="Pounds, Rabbits, etc" name="context" />
+				<input type="text" id="input-context" class="form-control" value="{{ context }}" placeholder="Pounds, Rabbits, etc" name="context" />
 				<br/><br/>
 				<label for="input">Enter a number:</label><br/>
-				<input type="text" id="input" class="form-control" value="" placeholder="1234" name="numbers" />
+				<input type="text" id="input" class="form-control" value="{{ number }}" placeholder="1234" name="numbers" />
 			</div>
 			<br/>
 			<div id="output">
-				{{ numbers_output }}
+				<h3>{{ numbers_output }}</h3>
 			</div>
 			<br/>
 			<input type="submit" class="btn btn-primary" value="Convert"/>
