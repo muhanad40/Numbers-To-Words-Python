@@ -75,6 +75,34 @@ class NumbersToWordsLargeNumberTests(TestCase):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert(1000), "One Thousand")
 
-	def test_1001_prints_One_Thousand_and_One(self):
+	def test_1001_prints_One_Thousand_One(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert(1001), "One Thousand, One")
+
+	def test_1011_prints_One_Thousand_Eleven(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1011), "One Thousand, Eleven")
+
+	def test_1020_prints_One_Thousand_Twenty(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1020), "One Thousand, Twenty")
+
+	def test_1058_prints_One_Thousand_Fifty_Eight(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1058), "One Thousand, Fifty Eight")
+
+	def test_1100_prints_One_Thousand_One_Hundred(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1100), "One Thousand, One Hundred")
+
+	def test_1553_prints_One_Thousand_Five_Hundred_and_Fifty_Three(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1553), "One Thousand, Five Hundred and Fifty Three")
+
+	def test_4835_prints_Four_Thousand_Eight_Hundred_and_Thirty_Five(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(4835), "Four Thousand, Eight Hundred and Thirty Five")
+
+	def test_9999_prints_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(9999), "Nine Thousand, Nine Hundred and Ninty Nine")
