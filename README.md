@@ -5,11 +5,17 @@ A personal Python challenge I wanted to take on. This script takes a numerical i
 # NOTE
 I wrote this script in JavaScript and Ruby
 
-# Usage
+# Examples
 ```python
-from NumbersToWords/lib import NumbersToWords
-numbers_to_words = NumbersToWords()
+from lib import NumbersToWords
+numbers_to_words = NumbersToWords.NumbersToWords()
 print numbers_to_words.convert(123) #=> "One Hundred and Twenty Three"
+
+rabbits = NumbersToWords.NumbersToWords("rabbits")
+print rabbits.convert(123) #=> "One Hundred and Twenty Three Rabbits"
+
+pounds = NumbersToWords.NumbersToWords("pounds")
+print pounds.convert(123) #=> "One Hundred and Twenty Three Pounds"
 ```
 
 # Demo
