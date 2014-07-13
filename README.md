@@ -13,14 +13,17 @@ I wrote this script in [JavaScript](https://github.com/muhanad40/Numbers-To-Word
 from lib import NumbersToWords
 
 numbers_to_words = NumbersToWords.NumbersToWords()
-print numbers_to_words.convert(123) #=> "One Hundred and Twenty Three"
+print numbers_to_words.convert(123)
+#=> "One Hundred and Twenty Three"
 
 # Output with a context
 rabbits = NumbersToWords.NumbersToWords("rabbits")
-print rabbits.convert(123) #=> "One Hundred and Twenty Three Rabbits"
+print rabbits.convert(123)
+#=> "One Hundred and Twenty Three Rabbits"
 
 pounds = NumbersToWords.NumbersToWords("pounds")
-print pounds.convert(123) #=> "One Hundred and Twenty Three Pounds"
+print pounds.convert(123)
+#=> "One Hundred and Twenty Three Pounds"
 ```
 
 # Demo
