@@ -1,0 +1,1 @@
+web: jinja hello:app --log-file=-
