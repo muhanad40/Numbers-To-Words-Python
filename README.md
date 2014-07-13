@@ -7,6 +7,7 @@ I wrote this script in [JavaScript](https://github.com/muhanad40/Numbers-To-Word
 
 # Examples
 ```python
+# Check the file 'examples.py'
 from lib import NumbersToWords
 
 numbers_to_words = NumbersToWords.NumbersToWords()
