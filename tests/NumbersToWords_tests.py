@@ -106,3 +106,59 @@ class NumbersToWordsLargeNumberTests(TestCase):
 	def test_9999_prints_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
 		numbers_to_words = NumbersToWords.NumbersToWords()
 		self.assertEqual(numbers_to_words.convert(9999), "Nine Thousand, Nine Hundred and Ninty Nine")
+
+	def test_10000_prints_Ten_Thousand(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(10000), "Ten Thousand")
+
+	def test_10001_prints_Ten_Thousand_One(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(10001), "Ten Thousand, One")
+
+	def test_10015_prints_Ten_Thousand_Fifteen(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(10015), "Ten Thousand, Fifteen")
+
+	def test_10100_prints_Ten_Thousand_One_Hundred(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(10100), "Ten Thousand, One Hundred")
+
+	def test_10999_prints_Ten_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(10999), "Ten Thousand, Nine Hundred and Ninty Nine")
+
+	def test_15351_prints_Fifteen_Thousand_Three_Hundred_and_Fifty_One(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(15351), "Fifteen Thousand, Three Hundred and Fifty One")
+
+	def test_99351_prints_Ninty_Nine_Thousand_Three_Hundred_and_Fifty_One(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(99351), "Ninty Nine Thousand, Three Hundred and Fifty One")
+
+	def test_199351_prints_One_Hundred_and_Ninty_Nine_Thousand_Three_Hundred_and_Fifty_One(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(199351), "One Hundred and Ninty Nine Thousand, Three Hundred and Fifty One")
+
+	def test_199999_prints_One_Hundred_and_Ninty_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(199999), "One Hundred and Ninty Nine Thousand, Nine Hundred and Ninty Nine")
+
+	def test_1199999_prints_One_Million_One_Hundred_and_Ninty_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1199999), "One Million, One Hundred and Ninty Nine Thousand, Nine Hundred and Ninty Nine")
+
+	def test_451199999_prints_Four_Hundred_and_Fifty_One_Million_One_Hundred_and_Ninty_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(451199999), "Four Hundred and Fifty One Million, One Hundred and Ninty Nine Thousand, Nine Hundred and Ninty Nine")
+
+	def test_1451199999_prints_One_Billion_Four_Hundred_and_Fifty_One_Million_One_Hundred_and_Ninty_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1451199999), "One Billion, Four Hundred and Fifty One Million, One Hundred and Ninty Nine Thousand, Nine Hundred and Ninty Nine")
+
+	def test_211451199999_prints_Two_Hundred_and_Eleven_Trillion_Four_Hundred_and_Fifty_One_Million_One_Hundred_and_Ninty_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(211451199999), "Two Hundred and Eleven Billion, Four Hundred and Fifty One Million, One Hundred and Ninty Nine Thousand, Nine Hundred and Ninty Nine")
+
+	def test_1211451199999_prints_One_Trillion_Two_Hundred_and_Eleven_Trillion_Four_Hundred_and_Fifty_One_Million_One_Hundred_and_Ninty_Nine_Thousand_Nine_Hundred_and_Ninty_Nine(self):
+		numbers_to_words = NumbersToWords.NumbersToWords()
+		self.assertEqual(numbers_to_words.convert(1211451199999), "One Trillion, Two Hundred and Eleven Billion, Four Hundred and Fifty One Million, One Hundred and Ninty Nine Thousand, Nine Hundred and Ninty Nine")
