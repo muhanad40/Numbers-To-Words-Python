@@ -34,7 +34,7 @@ class NumbersToWords(object):
 					segment_output.append(self.convert_segment(segment) + " " + self.WORDS[i].capitalize())
 				else:
 					segment_output.append(self.convert_segment(segment))
-		return ', '.join(segment_output[::-1]) + (self.context.capitalize() if self.context else "")
+		return ', '.join(segment_output[::-1]) + (" " + self.context.capitalize() if self.context else "")
 
 	def make_segments(self, number):
 		# reverse the order of numbers
