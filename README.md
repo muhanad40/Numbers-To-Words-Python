@@ -3,6 +3,8 @@ Numbers to Words (Python)
 A personal Python challenge I wanted to take on. This script takes a numerical input and outputs the words in English. This was coded using Test/Behaviour Driven Development (PyUnit).
 
 # NOTE
+You can add more words to the **WORDS** property in the initializer method in **NumbersToWords.py** file.
+
 I wrote this script in [JavaScript](https://github.com/muhanad40/Numbers-To-Words-JS) and [Ruby](https://github.com/muhanad40/Numbers-To-Words-Ruby)
 
 # Examples
